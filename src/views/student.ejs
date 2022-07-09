@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students</title>
+    <link rel="stylesheet" type="text/css" href="/css/dash.css" />
+  </head>
+  <body>
+    <div class="bg-container">
+      <nav class="navbar" >
+        <img src="/image/EXCellance.png"/>
+        <ul>
+          <li><a href="/dash">Home</a></li>
+          <li><a href="/students">Students</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+      <section class="dash-student">
+          <h2 class="heading">Students</h2>
+          <% if(result[0] ==null){%>
+            <a href="/students/add"><button class="addbtn" >Add Student</button></a>
+          <%}else {%>
+            <%for(let i=0;i < result.length; i++){%>
+          <div class="student">
+            <img alt="Student-Photo" src="/image/<%=result[i].Photo%>" width="100px">
+            <div class="student-details">
+                <div>
+                    <label for="dtlName"class="detail-label">Student Name </label>
+                    <span class="details" id="dtlName">:<%=result[i].Name%></span>
+                </div>
+                <div>
+                    <label for="dtlAdmNo" class="detail-label" >Admission Number</label>
+                    <span class="details" id="dtlAdmNo">:<%=result[i].AdmissionNo%></span>
+                </div>
+                <div>
+                  <label for="dtlsemester" class="detail-label">Semester</label>
+                  <span class="details" id="dtlsemester">:<%=result[i].Semester%></span>
+              </div>
+                <div>
+                    <label for="dtlDepartment" class="detail-label" >Department</label>
+                    <span class="details" id="dtlDepartment">:<%=result[i].Department%></span>
+                </div>
+                <div>
+                    <label for="dtlRollNo" class="detail-label">RollNo</label>
+                    <span class="details" id="dtlRollNo">:<%=result[i].RollNo%></span>
+                </div>
+                <a href="/students/edit/<%=result[i]._id%>"> <button class="editbtn">Edit details</button></a>
+                <a href="/students/more/<%=result[i]._id%>"><button class="editbtn">Read More</button></a>
+            </div>
+        </div>
+        <%}%>
+        <a href="/students/add"><button class="addbtn" >Add Student</button></a>
+         <%}%>
+      </section>
+    </div>
+    <!-- <div class="circle1"></div>
+    <div class="circle2"></div> -->
+  </body>
+</html>

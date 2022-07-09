@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background:linear-gradient(to right top,#65dfc9,#6cdbeb);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
+.dash{
+    min-height:80vh;
+    width: 70%;
+    background: white;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(2rem);
+    display: flex;
+    margin:30px auto;
+}
+.circle1,.circle2{
+    background: white;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.9),rgba(255,255,255,0.1));
+    height:12rem;
+    width: 12rem;
+    position: absolute;
+    border-radius: 50%;
+}
+.circle1{
+    top:5%;
+    right:10%;
+    z-index: 1;
+}
+.circle2{
+    bottom: 5%;
+    left: 10%;
+    z-index: 1;
+}
+.profile{
+     flex:1;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     /* background: white; */
+     background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+     border-top-left-radius: 2rem;
+     border-bottom-left-radius: 2rem;
+    
+}
+.profile-photo{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.dash-cards{
+     flex:2;
+     display: grid;
+     grid-template-columns: auto auto auto;
+     column-gap: 20px;
+     row-gap: 20px;
+  
+}
+.dash-cards .card-containers{
+    z-index: 4;
+    border-radius: 1rem;
+    padding: 30px;
+    position: relative;
+}
+.card{
+    margin: auto;
+    padding: 15px;
+    background: white;
+     background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:30px;
+    width: 150px;
+    z-index: 4;
+}
+.card img{
+    width:50px;
+}
+.card a{
+    text-decoration: none;
+    color:rgb(64, 3, 145);
+}
+.user,.address,.social{
+    position: relative;
+    text-align: center;
+    width: 80%;
+}
+.heading{
+    margin: 20px 30px;
+    color: rgb(24, 0, 158);
+    z-index: 2;
+}
+.dash-student{
+    min-height:80vh;
+    width: 70%;
+    background: white;
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    border-radius: 2rem;
+    z-index: 3;
+    backdrop-filter: blur(2rem);
+    padding: 10px;
+    margin: 30px auto;
+}
+.student{
+    background: linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3)) ;
+    border-radius: 2rem;
+    width: 90%;
+    margin-left:15px;
+    padding: 30px;
+    margin: auto;
+    display: flex;
+}
+.student-details{
+    margin: 10px;
+
+}
+.editbtn,.addbtn{
+    padding: 10px;
+    margin: 10px;
+    background: rgb(3, 206, 241);
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.addbtn{
+    /* position: relative; */
+    right: 400px;
+    z-index: 6;
+    
+}
+.navbar{
+    background:  linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    width: 100%;
+    z-index: 4;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+}
+.navbar ul{
+    display: flex;
+    position: absolute;
+    right: 10px;
+    top:15px;
+}
+.navbar ul li{
+    list-style: none;
+    padding: 0 10px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: rgb(89, 1, 129);
+}
+.navbar img{
+    width:75px;
+}
+.form-box{
+    width: 70%;
+    position: relative;
+    /* height: 80vh; */
+    background:  linear-gradient(to right bottom,rgba(255,255,255,0.7),rgba(255,255,255,0.3));
+    margin: 5% auto;
+    border-radius: 2rem;
+    padding: 5px;
+    z-index: 3;
+    padding: 40px 40px;
+    backdrop-filter: blur(2rem);
+}
+.detail-label{
+    display: inline-block;
+    margin: 0 5px;
+    width: 140px;
+}
+.student img{
+    width: 100px;
+    height: 150px;
+
+}

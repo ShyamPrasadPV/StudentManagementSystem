@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students details</title>
+    <link rel="stylesheet" type="text/css" href="/css/dash.css" />
+  </head>
+  <body>
+    <div class="bg-container">
+      <nav class="navbar" >
+        <img src="/image/EXCellance.png"/>
+        <ul>
+          <li><a href="/dash">Home</a></li>
+          <li><a href="/students">Students</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+      <section class="dash-student">
+          <h2 class="heading">Students</h2>
+          <% if(result == null){%>
+            <a href="/students/add"><button class="addbtn" >Add Student</button></a>
+          <%}else {%>
+          <div class="student">
+            <img alt="Student-Photo" src="/image/<%=result.Photo%>">
+            <div class="student-details">
+                <div>
+                    <label for="dtlName"class="detail-label">Student Name </label>
+                    <span class="details" id="dtlName">:<%=result.Name%></span>
+                </div>
+                <div>
+                    <label for="dtlAdmNo" class="detail-label" >Admission Number</label>
+                    <span class="details" id="dtlAdmNo">:<%=result.AdmissionNo%></span>
+                </div>
+                <div>
+                    <label for="dtlDepartment" class="detail-label" >Department</label>
+                    <span class="details" id="dtlDepartment">:<%=result.Department%></span>
+                </div>
+                <div>
+                  <label for="dtlsemester" class="detail-label">Semester</label>
+                  <span class="details" id="dtlsemester">:<%=result.Semester%></span>
+              </div>
+                <div>
+                    <label for="dtlRollNo" class="detail-label">RollNo</label>
+                    <span class="details" id="dtlRollNo">:<%=result.RollNo%></span>
+                </div>
+                <div>
+                  <label for="dtlMark1" class="detail-label">Mark1</label>
+                  <span class="details" id="dtlMark1">:<%=result.Mark1%></span>
+              </div>
+              <div>
+                <label for="dtlMark2" class="detail-label">Mark2</label>
+                <span class="details" id="dtlMark2">:<%=result.Mark2%></span>
+            </div>
+            <div>
+              <label for="dtlMark3" class="detail-label">Mark3</label>
+              <span class="details" id="dtlMark3">:<%=result.Mark3%></span>
+          </div>
+          <div>
+            <label for="dtlMark4" class="detail-label">Mark4</label>
+            <span class="details" id="dtlMark4">:<%=result.Mark4%></span>
+        </div>
+        <div>
+          <label for="dtlMark5" class="detail-label">Mark5</label>
+          <span class="details" id="dtlMark5">:<%=result.Mark5%></span>
+      </div>
+      <a href="/students/edit/<%=result._id%>"> <button class="editbtn">Edit details</button></a>
+            </div>
+        </div>
+         <%}%>
+         <a href="/students/add" ><button class="addbtn">Add Students</button></a>
+      </section>
+    </div>
+    <!-- <div class="circle1"></div>
+    <div class="circle2"></div> -->
+  </body>
+</html>

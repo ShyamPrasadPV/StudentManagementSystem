@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DashBoard</title>
+    <link rel="stylesheet" type="text/css" href="/css/dash.css" />
+  </head>
+  <body>
+    <div class="bg-container" style="min-height: 100vh;">
+      <section class="dash">
+        <div class="profile">
+          <div class="user">
+            <img
+              class="profile-photo"
+              alt="prof-photo"
+              src="/image/profile (1).png"
+            />
+            <h3><%=result.Name%></h3>
+            <p><%=result.Designation%><br /><%=result.Department%></p>
+            <a href="/teachers/edit/<%=result._id%>">Edit profile</a>
+          </div>
+          <div class="address">
+            <h3>Address</h3>
+            <p><%=result.Address1%></p>
+            <p><%=result.Address2%></p>
+          </div>
+          <div class="social">
+            <a href="<%=result.Email%>">Email</a><br />
+            <a href="#">social-link2</a><br />
+            <a href="#">social-link3</a>
+          </div>
+        </div>
+        <div class="dash-cards">
+          <div class="card-containers">
+            <div class="card">
+              <a href="/students">
+                <img alt="student icon" src="/image/student.png" />
+                <h4>Students</h4>
+              </a>
+            </div>
+          </div>
+          <div class="card-containers">
+            <div class="card">
+              <a href="/deparments">
+                <img alt="Department icon" src="/image/icon-office-17.jpg" />
+                <h4>Department</h4>
+              </a>
+            </div>
+          </div>
+          <div class="card-containers">
+            <div class="card">
+              <a href="/subjects">
+                <img alt="Subjects icon" src="/image/books-icon-png-11.jpg" />
+                <h4>Subjects</h4>
+              </a>
+            </div>
+          </div>
+          <div class="card-containers">
+            <div class="card">
+              <a href="/attendance">
+              <img alt="Attendence icon" src="/image/img_383254.png" />
+              <h4>Attendence</h4>
+            </a>
+            </div>
+          </div>
+          <div class="card-containers">
+            <div class="card">
+              <a href="/miscellenous">
+              <img alt="additional icon" src="/image/add-note-icon-21.jpg" />
+                <h4>Additional Duties</h4>
+              </a>
+            </div>
+          </div>
+          <div class="card-containers">
+            <div class="card">
+              <a href="/logout">
+              <img alt="logout icon" src="/image/logout-icon-png-25.jpg" />
+                <h4>Logout</h4>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+  </body>
+</html>

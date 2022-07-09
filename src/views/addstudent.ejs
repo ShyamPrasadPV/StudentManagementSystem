@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student Info</title>
+    <link type="text/css" rel="stylesheet" href="/css/dash.css">
+    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css" >
+    <script src="/js/bootstrap.min.js" ></script>
+</head>
+<body>
+      <nav class="navbar" >
+        <img src="/image/EXCellance.png"/>
+        <ul>
+          <li><a href="/dash">Home</a></li>
+          <li><a href="/students">Students</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+        <div class="form-box">
+          <h2 id="heading2">Student informations</h2>
+            <form action="/students/add" method="POST">
+                <div class="row mb-3">
+                    <label for="Full name" class="col-sm-2 col-form-label">Name:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" placeholder="Enter your name"  name="name" value="" aria-label="Full name">
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="formFile" class="form-label">Profile Image</label>
+                    <input class="form-control" type="file" id="formFile" name="filename">
+                  </div>
+                  <div class="row mb-3">
+                    <label for="Full name" class="col-sm-2 col-form-label">Admission No:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control"  name="AdmNo" value="" >
+                    </div>
+                  </div>
+                  <div class="row mb-3">
+                    <label for="Full name" class="col-sm-2 col-form-label">Roll No:</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" name="rollNo" value="" >
+                    </div>
+                  </div>
+                <div class="row mb-3">
+                    <select class="form-select" id="specificSizeSelect" name="department">
+                        <option selected>Choose department</option>
+                        <option value="Mechanical Engg.">Mechanical Engg.</option>
+                        <option value="Civil Engg.">Civil Engg.</option>
+                        <option value="Electrical Engg.">Electrical Engg.</option>
+                        <option value="Elecronics & Communication Engg.">Elecronics & Communication Engg.</option>
+                        <option value="Computer Science Engg.">Computer Science Engg.</option>
+                      </select>
+                </div>
+                <div class="row mb-3">
+                    <select class="form-select" id="specificSizeSelect" name="semester">
+                        <option selected>Choose semester</option>
+                        <option value="Combined S1&S2">Combined S1&S2</option>
+                        <option value="S3">S3</option>
+                        <option value="S4">S4</option>
+                        <option value="S5">S5</option>
+                        <option value="S6">S6</option>
+                        <option value="S7">S7</option>
+                        <option value="S8">S8</option>
+                      </select>
+                </div>
+                <div class="row mb-3">
+                  <label for="Full name" class="col-sm-2 col-form-label">Subject1</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control"  name="m1" value="" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Full name" class="col-sm-2 col-form-label">Subject2</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control"  name="m2" value="" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Full name" class="col-sm-2 col-form-label">Subject3</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control"  name="m3" value="" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Full name" class="col-sm-2 col-form-label">Subject4</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control"  name="m4" value="" >
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <label for="Full name" class="col-sm-2 col-form-label">Subject5</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control"  name="m5" value="" >
+                  </div>
+                </div>
+                <!-- <div class="row mb-3">
+                  <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck1">
+                      <label class="form-check-label" for="gridCheck1">
+                        Example checkbox
+                      </label>
+                    </div>
+                  </div>
+                </div> -->
+                <button type="submit" class="addbtn">Add</button>
+              </form>
+        </div>
+    <div class="circle1"></div>
+    <div class="circle2"></div>
+</body>
+</html>
